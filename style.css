@@ -123,6 +123,7 @@ header > h1 {
 }
 
 .card {
+  position: relative;
   text-align: left;
   border-radius: 8px;
   padding: 1.75rem 2rem;
@@ -147,20 +148,48 @@ header > h1 {
   align-self: flex-end;
 }
 
-.card:is(#cyan) {
-  border-top: 4px solid var(--clr-cyan);
+.card:is(#cyan)::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-cyan);
 }
 
-.card:is(#red) {
-  border-top: 4px solid var(--clr-red);
+.card:is(#red)::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-red);
 }
 
-.card:is(#orange) {
-  border-top: 4px solid var(--clr-orange);
+.card:is(#orange)::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-orange);
 }
 
-.card:is(#blue) {
-  border-top: 4px solid var(--clr-blue);
+.card:is(#blue)::before {
+  position: absolute;
+  content: '';
+  height: 4px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px 8px 0 0;
+  background-color: var(--clr-blue);
 }
 
 .card-title {
