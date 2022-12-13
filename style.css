@@ -103,7 +103,7 @@ header {
   max-width: 55ch;
 }
 
-header > h1 {
+header>h1 {
   color: var(--clr-very-dark-blue);
   font-size: 1.5rem;
 }
@@ -139,16 +139,16 @@ header > h1 {
   gap: .5rem;
 }
 
-.card > p {
+.card>p {
   margin-bottom: auto;
 }
 
-.card > svg {
+.card>svg {
   margin-top: 2rem;
   align-self: flex-end;
 }
 
-.card:is(#cyan)::before {
+.card::before {
   position: absolute;
   content: '';
   height: 4px;
@@ -156,40 +156,23 @@ header > h1 {
   top: 0;
   left: 0;
   border-radius: 8px 8px 0 0;
-  background-color: var(--clr-cyan);
-}
-
-.card:is(#red)::before {
-  position: absolute;
-  content: '';
-  height: 4px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 8px 8px 0 0;
-  background-color: var(--clr-red);
-}
-
-.card:is(#orange)::before {
-  position: absolute;
-  content: '';
-  height: 4px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 8px 8px 0 0;
-  background-color: var(--clr-orange);
+  background-color: var(--bg-color);
 }
 
 .card:is(#blue)::before {
-  position: absolute;
-  content: '';
-  height: 4px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 8px 8px 0 0;
-  background-color: var(--clr-blue);
+  --bg-color: var(--clr-blue);
+}
+
+.card:is(#orange)::before {
+  --bg-color: var(--clr-orange);
+}
+
+.card:is(#red)::before {
+  --bg-color: var(--clr-red);
+}
+
+.card:is(#cyan)::before {
+  --bg-color: var(--clr-cyan);
 }
 
 .card-title {
@@ -197,10 +180,10 @@ header > h1 {
 }
 
 @media (min-width:768px) {
-  header > h1 {
+  header>h1 {
     font-size: 2.5rem;
   }
-  
+
   .cards {
     /* grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr; */
